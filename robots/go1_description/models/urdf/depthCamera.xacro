@@ -19,7 +19,7 @@
             <visual>
             <origin xyz="0 0 0" rpy="0 0 0"/>
             <geometry>
-                <mesh filename="package://go1_description/meshes/depthCamera.dae" scale="1 1 1"/>
+                <mesh filename="package://go1_description/models/meshes/depthCamera.dae" scale="1 1 1"/>
             </geometry>
             </visual>
 
@@ -82,6 +82,5 @@
                 </plugin>
             </sensor>
         </gazebo>
-
     </xacro:macro>
 </robot>
