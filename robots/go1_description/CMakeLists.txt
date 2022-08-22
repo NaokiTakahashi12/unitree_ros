@@ -1,19 +1,15 @@
-cmake_minimum_required(VERSION 2.8.3)
+cmake_minimum_required(VERSION 3.8)
 project(go1_description)
 
-find_package(catkin REQUIRED COMPONENTS
-    genmsg
-    roscpp
-    std_msgs
-    tf
-)
+if(CMAKE_COMPILER_IS_GNUCXX OR CMAKE_CXX_COMPILER_ID MATCHES "Clang")
+  add_compile_options(-Wall -Wextra -Wpedantic)
+endif()
 
-catkin_package(
-    CATKIN_DEPENDS
-)
+find_package(ament_cmake REQUIRED)
 
-include_directories(
-    # include
-    ${Boost_INCLUDE_DIR}
-    ${catkin_INCLUDE_DIRS}
-)
+if(BUILD_TESTING)
+  find_package(ament_lint_auto REQUIRED)
+  ament_lint_auto_find_test_dependencies()
+endif()
+
+ament_package()
