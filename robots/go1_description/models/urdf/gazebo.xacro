@@ -4,6 +4,7 @@
   <xacro:if value="$(arg ignition_gazebo)">
     <gazebo>
       <plugin filename="ignition-gazebo-joint-state-publisher-system" name="ignition::gazebo::systems::JointStatePublisher"/>
+      <plugin filename="ignition-gazebo-contact-system" name="ignition::gazebo::systems::Contact"/>
     </gazebo>
   </xacro:if>
   <xacro:if value="${'$(arg ignition_gazebo)' == 'false'}">
@@ -186,6 +187,7 @@
   <gazebo reference="FR_calf">
     <sensor name="FR_foot_contact" type="contact">
       <update_rate>100</update_rate>
+      <always_on>true</always_on>
       <xacro:if value="${'$(arg ignition_gazebo)' == 'false'}">
         <plugin name="contactPlugin" filename="libunitreeFootContactPlugin.so"/>
       </xacro:if>
@@ -197,6 +199,7 @@
   <gazebo reference="FL_calf">
     <sensor name="FL_foot_contact" type="contact">
       <update_rate>100</update_rate>
+      <always_on>true</always_on>
       <xacro:if value="${'$(arg ignition_gazebo)' == 'false'}">
         <plugin name="contactPlugin" filename="libunitreeFootContactPlugin.so"/>
       </xacro:if>
@@ -208,6 +211,7 @@
   <gazebo reference="RR_calf">
     <sensor name="RR_foot_contact" type="contact">
       <update_rate>100</update_rate>
+      <always_on>true</always_on>
       <xacro:if value="${'$(arg ignition_gazebo)' == 'false'}">
         <plugin name="contactPlugin" filename="libunitreeFootContactPlugin.so"/>
       </xacro:if>
@@ -219,6 +223,7 @@
   <gazebo reference="RL_calf">
     <sensor name="RL_foot_contact" type="contact">
       <update_rate>100</update_rate>
+      <always_on>true</always_on>
       <xacro:if value="${'$(arg ignition_gazebo)' == 'false'}">
         <plugin name="contactPlugin" filename="libunitreeFootContactPlugin.so"/>
       </xacro:if>
