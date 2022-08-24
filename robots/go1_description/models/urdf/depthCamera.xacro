@@ -18,6 +18,7 @@
         <geometry>
           <mesh filename="package://go1_description/models/meshes/depthCamera.dae" scale="1 1 1"/>
         </geometry>
+        <material name="black"/>
       </visual>
       <inertial>
         <mass value="1e-5"/>
@@ -48,31 +49,33 @@
             <far>5</far>
           </clip>
         </camera>
-        <plugin name="camera_${name}_controller" filename="libgazebo_ros_openni_kinect.so">
-          <baseline>0.025</baseline>
-          <alwaysOn>true</alwaysOn>
-          <updateRate>0.0</updateRate>
-          <cameraName>camera_${name}_ir</cameraName>
-          <imageTopicName>/camera_${name}/color/image_raw</imageTopicName>
-          <cameraInfoTopicName>/camera_${name}/color/camera_info</cameraInfoTopicName>
-          <depthImageTopicName>/camera_${name}/depth/image_raw</depthImageTopicName>
-          <depthImageInfoTopicName>/camera_${name}/depth/camera_info</depthImageInfoTopicName>
-          <!-- <pointCloudTopicName>/camera_${name}/depth/points</pointCloudTopicName> -->
-          <pointCloudTopicName>/cam${camID}/point_cloud_${name}</pointCloudTopicName>
-          <frameName>camera_optical_${name}</frameName>
-          <pointCloudCutoff>0.1</pointCloudCutoff>
-          <pointCloudCutoffMax>1.5</pointCloudCutoffMax>
-          <distortionK1>0.0</distortionK1>
-          <distortionK2>0.0</distortionK2>
-          <distortionK3>0.0</distortionK3>
-          <distortionT1>0.0</distortionT1>
-          <distortionT2>0.0</distortionT2>
-          <CxPrime>0</CxPrime>
-          <Cx>0.0045</Cx>
-          <Cy>0.0039</Cy>
-          <focalLength>0</focalLength>
-          <hackBaseline>0</hackBaseline>
-        </plugin>
+        <xacro:if value="${'$(arg ignition_gazebo)' == 'false'}">
+          <plugin name="camera_${name}_controller" filename="libgazebo_ros_openni_kinect.so">
+            <baseline>0.025</baseline>
+            <alwaysOn>true</alwaysOn>
+            <updateRate>0.0</updateRate>
+            <cameraName>camera_${name}_ir</cameraName>
+            <imageTopicName>/camera_${name}/color/image_raw</imageTopicName>
+            <cameraInfoTopicName>/camera_${name}/color/camera_info</cameraInfoTopicName>
+            <depthImageTopicName>/camera_${name}/depth/image_raw</depthImageTopicName>
+            <depthImageInfoTopicName>/camera_${name}/depth/camera_info</depthImageInfoTopicName>
+            <!-- <pointCloudTopicName>/camera_${name}/depth/points</pointCloudTopicName> -->
+            <pointCloudTopicName>/cam${camID}/point_cloud_${name}</pointCloudTopicName>
+            <frameName>camera_optical_${name}</frameName>
+            <pointCloudCutoff>0.1</pointCloudCutoff>
+            <pointCloudCutoffMax>1.5</pointCloudCutoffMax>
+            <distortionK1>0.0</distortionK1>
+            <distortionK2>0.0</distortionK2>
+            <distortionK3>0.0</distortionK3>
+            <distortionT1>0.0</distortionT1>
+            <distortionT2>0.0</distortionT2>
+            <CxPrime>0</CxPrime>
+            <Cx>0.0045</Cx>
+            <Cy>0.0039</Cy>
+            <focalLength>0</focalLength>
+            <hackBaseline>0</hackBaseline>
+          </plugin>
+        </xacro:if>
       </sensor>
     </gazebo>
   </xacro:macro>
