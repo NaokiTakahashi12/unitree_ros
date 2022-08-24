@@ -40,7 +40,7 @@
       <geometry>
         <mesh filename="package://go1_description/models/meshes/trunk.dae" scale="1 1 1"/>
       </geometry>
-      <!-- <material name="orange"/> -->
+      <material name="silver"/>
     </visual>
     <collision>
       <origin rpy="0 0 0" xyz="0 0 0"/>
@@ -66,7 +66,7 @@
           <cylinder length="${stick_length}" radius="${stick_radius}"/>
         </geometry>
         <origin rpy="0 0 0" xyz="0 0 0"/>
-        <!-- <material name="white"/> -->
+        <material name="silver"/>
       </visual>
       <collision>
         <geometry>
@@ -96,7 +96,7 @@
       <geometry>
         <box size="0.001 0.001 0.001"/>
       </geometry>
-      <!-- <material name="red"/> -->
+      <material name="black"/>
     </visual>
     <collision>
       <origin rpy="0 0 0" xyz="0 0 0"/>

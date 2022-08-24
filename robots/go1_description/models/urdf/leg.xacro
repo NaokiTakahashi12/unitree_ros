@@ -32,7 +32,7 @@
         <geometry>
           <mesh filename="package://go1_description/models/meshes/hip.dae" scale="1 1 1"/>
         </geometry>
-        <!-- <material name="orange"/> -->
+        <material name="silver"/>
       </visual>
       <collision>
         <origin rpy="${PI/2.0} 0 0" xyz="0 0 0"/>
@@ -79,7 +79,7 @@
             <mesh filename="package://go1_description/models/meshes/thigh_mirror.dae" scale="1 1 1"/>
           </xacro:if>
         </geometry>
-        <!-- <material name="orange"/> -->
+        <material name="silver"/>
       </visual>
       <collision>
         <origin rpy="0 ${PI/2.0} 0" xyz="0 0 ${-thigh_length/2.0}"/>
@@ -107,7 +107,7 @@
         <geometry>
           <mesh filename="package://go1_description/models/meshes/calf.dae" scale="1 1 1"/>
         </geometry>
-        <!-- <material name="orange"/> -->
+        <material name="silver"/>
       </visual>
       <collision>
         <origin rpy="0 ${PI/2.0} 0" xyz="0 0 ${-calf_length/2.0}"/>
@@ -132,7 +132,7 @@
         <geometry>
           <sphere radius="${foot_radius-0.01}"/>
         </geometry>
-        <!-- <material name="orange"/> -->
+        <material name="silver"/>
       </visual>
       <collision>
         <origin rpy="0 0 0" xyz="0 0 0"/>
