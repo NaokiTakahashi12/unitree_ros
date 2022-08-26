@@ -42,6 +42,7 @@
   <gazebo reference="imu_link">
     <gravity>true</gravity>
     <sensor name="imu_sensor" type="imu">
+      <pose>0 0 0 0 0 0</pose>
       <always_on>true</always_on>
       <update_rate>100</update_rate>
       <visualize>false</visualize>
@@ -57,7 +58,48 @@
           <frameName>imu_link</frameName>
         </plugin>
       </xacro:unless>
-      <pose>0 0 0 0 0 0</pose>
+      <imu>
+        <angular_velocity>
+          <x>
+            <noise type="gaussian">
+              <mean>0.0</mean>
+              <stddev>0.125</stddev>
+            </noise>
+          </x>
+          <y>
+            <noise type="gaussian">
+              <mean>0.0</mean>
+              <stddev>0.125</stddev>
+            </noise>
+          </y>
+          <z>
+            <noise type="gaussian">
+              <mean>0.0</mean>
+              <stddev>0.2</stddev>
+            </noise>
+          </z>
+        </angular_velocity>
+        <linear_acceleration>
+          <x>
+            <noise type="gaussian">
+              <mean>0.0</mean>
+              <stddev>0.125</stddev>
+            </noise>
+          </x>
+          <y>
+            <noise type="gaussian">
+              <mean>0.0</mean>
+              <stddev>0.125</stddev>
+            </noise>
+          </y>
+          <z>
+            <noise type="gaussian">
+              <mean>0.0</mean>
+              <stddev>0.2</stddev>
+            </noise>
+          </z>
+        </linear_acceleration>
+      </imu>
     </sensor>
   </gazebo>
   <gazebo reference="base_link">
@@ -212,6 +254,11 @@
             <near>0.1</near>
             <far>5</far>
           </clip>
+          <noise>
+            <mean>0.0</mean>
+            <stddev>0.075</stddev>
+            <type>gaussian</type>
+          </noise>
         </camera>
         <xacro:unless value="$(arg ignition_gazebo)">
           <plugin name="camera_${name}_controller" filename="libgazebo_ros_openni_kinect.so">
