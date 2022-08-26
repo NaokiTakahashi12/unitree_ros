@@ -132,7 +132,7 @@
         <geometry>
           <sphere radius="${foot_radius-0.01}"/>
         </geometry>
-        <material name="silver"/>
+        <material name="black"/>
       </visual>
       <collision>
         <origin rpy="0 0 0" xyz="0 0 0"/>
@@ -146,5 +146,8 @@
       </inertial>
     </link>
     <xacro:leg_transmission name="${name}"/>
+    <xacro:if value="$(arg use_gazebo)">
+      <xacro:leg_gazebo_configulation name="${name}"/>
+    </xacro:if>
   </xacro:macro>
 </robot>

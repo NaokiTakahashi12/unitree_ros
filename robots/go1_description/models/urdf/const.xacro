@@ -89,4 +89,12 @@
   <xacro:property name="calf_izz" value="0.000030273372"/>
   <!-- foot -->
   <xacro:property name="foot_mass" value="0.06"/>
+  <!-- Gazebo simulation properties -->
+  <xacro:property name="leg_link_kp" value="100.0"/>
+  <xacro:property name="leg_link_kd" value="1.0"/>
+  <xacro:property name="enable_self_collision_check" value="true"/>
+  <xacro:property name="default_link_mu1" value="0.2"/>
+  <xacro:property name="default_link_mu2" value="0.2"/>
+  <xacro:property name="foot_link_mu1" value="0.6"/>
+  <xacro:property name="foot_link_mu2" value="0.6"/>
 </robot>
