@@ -4,6 +4,7 @@
     <xacro:if value="$(arg ignition_gazebo)">
       <plugin filename="ignition-gazebo-joint-state-publisher-system" name="ignition::gazebo::systems::JointStatePublisher"/>
       <plugin filename="ignition-gazebo-contact-system" name="ignition::gazebo::systems::Contact"/>
+      <plugin filename="ignition-gazebo-forcetorque-system" name="ignition::gazebo::systems::ForceTorque"/>
       <plugin filename="ignition-gazebo-imu-system" name="ignition::gazebo::systems::Imu"/>
       <xacro:if value="$(arg enable_sensors_plugin)">
         <plugin filename="ignition-gazebo-sensors-system" name="ignition::gazebo::systems::Sensors"/>
@@ -228,6 +229,21 @@
           </plugin>
         </visual>
       </xacro:unless>
+    </gazebo>
+    <gazebo reference="${name}_hip_joint">
+      <sensor name="${name}_thigh_torque_sensor" type="force_torque">
+        <update_rate>50</update_rate>
+      </sensor>
+    </gazebo>
+    <gazebo reference="${name}_thigh_joint">
+      <sensor name="${name}_thigh_torque_sensor" type="force_torque">
+        <update_rate>50</update_rate>
+      </sensor>
+    </gazebo>
+    <gazebo reference="${name}_calf_joint">
+      <sensor name="${name}_thigh_torque_sensor" type="force_torque">
+        <update_rate>50</update_rate>
+      </sensor>
     </gazebo>
   </xacro:macro>
   <xacro:macro name="depth_camera_gazebo_configulation" params="name">
