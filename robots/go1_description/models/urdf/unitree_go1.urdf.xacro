@@ -3,7 +3,8 @@
   <xacro:arg name="use_gazebo" default="true"/>
   <xacro:arg name="ignition_gazebo" default="true"/>
   <!-- Enable depth camera simulation for ignition gazebo -->
-  <xacro:arg name="enable_sensors_plugin" default="false"/>
+  <xacro:arg name="enable_sensors_plugin" default="true"/>
+  <xacro:arg name="enable_low_resolution_depth" default="true"/>
   <xacro:include filename="$(find go1_description)/models/urdf/const.xacro"/>
   <xacro:include filename="$(find go1_description)/models/urdf/materials.xacro"/>
   <xacro:if value="$(arg use_gazebo)">

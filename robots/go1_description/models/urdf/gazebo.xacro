@@ -194,11 +194,20 @@
         <update_rate>16</update_rate>
         <camera>
           <horizontal_fov>2.094</horizontal_fov>
-          <image>
-            <width>928</width>
-            <height>800</height>
-            <format>R8G8B8</format>
-          </image>
+          <xacro:if value="$(arg enable_low_resolution_depth)">
+            <image>
+              <width>116</width>
+              <height>100</height>
+              <format>R8G8B8</format>
+            </image>
+          </xacro:if>
+          <xacro:unless value="$(arg enable_low_resolution_depth)">
+            <image>
+              <width>928</width>
+              <height>800</height>
+              <format>R8G8B8</format>
+            </image>
+          </xacro:unless>
           <clip>
             <near>0.1</near>
             <far>5</far>
