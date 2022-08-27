@@ -7,6 +7,10 @@ Panels:
         - /Global Options1
         - /Status1
         - /TF1/Frames1
+        - /Camera Points1
+        - /Imu1/Axes properties1
+        - /Imu1/Acceleration properties1
+        - /Ultrasound1
       Splitter Ratio: 0.5
     Tree Height: 873
   - Class: rviz_common/Selection
@@ -26,7 +30,7 @@ Panels:
     Experimental: false
     Name: Time
     SyncMode: 0
-    SyncSource: ""
+    SyncSource: Face Ultrasonic Points
 Visualization Manager:
   Class: ""
   Displays:
@@ -53,46 +57,6 @@ Visualization Manager:
       Frame Timeout: 15
       Frames:
         All Enabled: true
-        FL_calf:
-          Value: true
-        FL_foot:
-          Value: true
-        FL_hip:
-          Value: true
-        FL_thigh:
-          Value: true
-        FL_thigh_shoulder:
-          Value: true
-        FR_calf:
-          Value: true
-        FR_foot:
-          Value: true
-        FR_hip:
-          Value: true
-        FR_thigh:
-          Value: true
-        FR_thigh_shoulder:
-          Value: true
-        RL_calf:
-          Value: true
-        RL_foot:
-          Value: true
-        RL_hip:
-          Value: true
-        RL_thigh:
-          Value: true
-        RL_thigh_shoulder:
-          Value: true
-        RR_calf:
-          Value: true
-        RR_foot:
-          Value: true
-        RR_hip:
-          Value: true
-        RR_thigh:
-          Value: true
-        RR_thigh_shoulder:
-          Value: true
         base_link:
           Value: true
         camera_chin:
@@ -119,7 +83,47 @@ Visualization Manager:
           Value: true
         camera_right:
           Value: true
+        fl_calf:
+          Value: true
+        fl_foot:
+          Value: true
+        fl_hip:
+          Value: true
+        fl_thigh:
+          Value: true
+        fl_thigh_shoulder:
+          Value: true
+        fr_calf:
+          Value: true
+        fr_foot:
+          Value: true
+        fr_hip:
+          Value: true
+        fr_thigh:
+          Value: true
+        fr_thigh_shoulder:
+          Value: true
         imu_link:
+          Value: true
+        rl_calf:
+          Value: true
+        rl_foot:
+          Value: true
+        rl_hip:
+          Value: true
+        rl_thigh:
+          Value: true
+        rl_thigh_shoulder:
+          Value: true
+        rr_calf:
+          Value: true
+        rr_foot:
+          Value: true
+        rr_hip:
+          Value: true
+        rr_thigh:
+          Value: true
+        rr_thigh_shoulder:
           Value: true
         trunk:
           Value: true
@@ -129,6 +133,24 @@ Visualization Manager:
           Value: true
         ultraSound_right:
           Value: true
+        unitree_go1/base_link/camera_chin_camera:
+          Value: true
+        unitree_go1/base_link/camera_face_camera:
+          Value: true
+        unitree_go1/base_link/camera_left_camera:
+          Value: true
+        unitree_go1/base_link/camera_rearDown_camera:
+          Value: true
+        unitree_go1/base_link/camera_right_camera:
+          Value: true
+        unitree_go1/base_link/imu_sensor:
+          Value: true
+        unitree_go1/base_link/ultrasound_face_sensor:
+          Value: true
+        unitree_go1/base_link/ultrasound_left_sensor:
+          Value: true
+        unitree_go1/base_link/ultrasound_right_sensor:
+          Value: true
       Marker Scale: 0.30000001192092896
       Name: TF
       Show Arrows: true
@@ -137,61 +159,75 @@ Visualization Manager:
       Tree:
         base_link:
           trunk:
-            FL_hip:
-              FL_thigh:
-                FL_calf:
-                  FL_foot:
-                    {}
-              FL_thigh_shoulder:
-                {}
-            FR_hip:
-              FR_thigh:
-                FR_calf:
-                  FR_foot:
-                    {}
-              FR_thigh_shoulder:
-                {}
-            RL_hip:
-              RL_thigh:
-                RL_calf:
-                  RL_foot:
-                    {}
-              RL_thigh_shoulder:
-                {}
-            RR_hip:
-              RR_thigh:
-                RR_calf:
-                  RR_foot:
-                    {}
-              RR_thigh_shoulder:
-                {}
             camera_chin:
               camera_optical_chin:
                 {}
+              unitree_go1/base_link/camera_chin_camera:
+                {}
             camera_face:
               camera_optical_face:
+                {}
+              unitree_go1/base_link/camera_face_camera:
                 {}
             camera_left:
               camera_laserscan_link_left:
                 {}
               camera_optical_left:
                 {}
+              unitree_go1/base_link/camera_left_camera:
+                {}
             camera_rearDown:
               camera_optical_rearDown:
+                {}
+              unitree_go1/base_link/camera_rearDown_camera:
                 {}
             camera_right:
               camera_laserscan_link_right:
                 {}
               camera_optical_right:
                 {}
+              unitree_go1/base_link/camera_right_camera:
+                {}
+            fl_hip:
+              fl_thigh:
+                fl_calf:
+                  fl_foot:
+                    {}
+              fl_thigh_shoulder:
+                {}
+            fr_hip:
+              fr_thigh:
+                fr_calf:
+                  fr_foot:
+                    {}
+              fr_thigh_shoulder:
+                {}
             imu_link:
-              {}
+              unitree_go1/base_link/imu_sensor:
+                {}
+            rl_hip:
+              rl_thigh:
+                rl_calf:
+                  rl_foot:
+                    {}
+              rl_thigh_shoulder:
+                {}
+            rr_hip:
+              rr_thigh:
+                rr_calf:
+                  rr_foot:
+                    {}
+              rr_thigh_shoulder:
+                {}
             ultraSound_face:
-              {}
+              unitree_go1/base_link/ultrasound_face_sensor:
+                {}
             ultraSound_left:
-              {}
+              unitree_go1/base_link/ultrasound_left_sensor:
+                {}
             ultraSound_right:
-              {}
+              unitree_go1/base_link/ultrasound_right_sensor:
+                {}
       Update Interval: 0
       Value: true
     - Alpha: 0.75
@@ -211,107 +247,7 @@ Visualization Manager:
         Expand Joint Details: false
         Expand Link Details: false
         Expand Tree: false
-        FL_calf:
-          Alpha: 1
-          Show Axes: false
-          Show Trail: false
-          Value: true
-        FL_foot:
-          Alpha: 1
-          Show Axes: false
-          Show Trail: false
-          Value: true
-        FL_hip:
-          Alpha: 1
-          Show Axes: false
-          Show Trail: false
-          Value: true
-        FL_thigh:
-          Alpha: 1
-          Show Axes: false
-          Show Trail: false
-          Value: true
-        FL_thigh_shoulder:
-          Alpha: 1
-          Show Axes: false
-          Show Trail: false
-          Value: true
-        FR_calf:
-          Alpha: 1
-          Show Axes: false
-          Show Trail: false
-          Value: true
-        FR_foot:
-          Alpha: 1
-          Show Axes: false
-          Show Trail: false
-          Value: true
-        FR_hip:
-          Alpha: 1
-          Show Axes: false
-          Show Trail: false
-          Value: true
-        FR_thigh:
-          Alpha: 1
-          Show Axes: false
-          Show Trail: false
-          Value: true
-        FR_thigh_shoulder:
-          Alpha: 1
-          Show Axes: false
-          Show Trail: false
-          Value: true
         Link Tree Style: Links in Alphabetic Order
-        RL_calf:
-          Alpha: 1
-          Show Axes: false
-          Show Trail: false
-          Value: true
-        RL_foot:
-          Alpha: 1
-          Show Axes: false
-          Show Trail: false
-          Value: true
-        RL_hip:
-          Alpha: 1
-          Show Axes: false
-          Show Trail: false
-          Value: true
-        RL_thigh:
-          Alpha: 1
-          Show Axes: false
-          Show Trail: false
-          Value: true
-        RL_thigh_shoulder:
-          Alpha: 1
-          Show Axes: false
-          Show Trail: false
-          Value: true
-        RR_calf:
-          Alpha: 1
-          Show Axes: false
-          Show Trail: false
-          Value: true
-        RR_foot:
-          Alpha: 1
-          Show Axes: false
-          Show Trail: false
-          Value: true
-        RR_hip:
-          Alpha: 1
-          Show Axes: false
-          Show Trail: false
-          Value: true
-        RR_thigh:
-          Alpha: 1
-          Show Axes: false
-          Show Trail: false
-          Value: true
-        RR_thigh_shoulder:
-          Alpha: 1
-          Show Axes: false
-          Show Trail: false
-          Value: true
         base_link:
           Alpha: 1
           Show Axes: false
@@ -370,7 +306,107 @@ Visualization Manager:
           Show Axes: false
           Show Trail: false
           Value: true
+        fl_calf:
+          Alpha: 1
+          Show Axes: false
+          Show Trail: false
+          Value: true
+        fl_foot:
+          Alpha: 1
+          Show Axes: false
+          Show Trail: false
+          Value: true
+        fl_hip:
+          Alpha: 1
+          Show Axes: false
+          Show Trail: false
+          Value: true
+        fl_thigh:
+          Alpha: 1
+          Show Axes: false
+          Show Trail: false
+          Value: true
+        fl_thigh_shoulder:
+          Alpha: 1
+          Show Axes: false
+          Show Trail: false
+          Value: true
+        fr_calf:
+          Alpha: 1
+          Show Axes: false
+          Show Trail: false
+          Value: true
+        fr_foot:
+          Alpha: 1
+          Show Axes: false
+          Show Trail: false
+          Value: true
+        fr_hip:
+          Alpha: 1
+          Show Axes: false
+          Show Trail: false
+          Value: true
+        fr_thigh:
+          Alpha: 1
+          Show Axes: false
+          Show Trail: false
+          Value: true
+        fr_thigh_shoulder:
+          Alpha: 1
+          Show Axes: false
+          Show Trail: false
+          Value: true
         imu_link:
+          Alpha: 1
+          Show Axes: false
+          Show Trail: false
+          Value: true
+        rl_calf:
+          Alpha: 1
+          Show Axes: false
+          Show Trail: false
+          Value: true
+        rl_foot:
+          Alpha: 1
+          Show Axes: false
+          Show Trail: false
+          Value: true
+        rl_hip:
+          Alpha: 1
+          Show Axes: false
+          Show Trail: false
+          Value: true
+        rl_thigh:
+          Alpha: 1
+          Show Axes: false
+          Show Trail: false
+          Value: true
+        rl_thigh_shoulder:
+          Alpha: 1
+          Show Axes: false
+          Show Trail: false
+          Value: true
+        rr_calf:
+          Alpha: 1
+          Show Axes: false
+          Show Trail: false
+          Value: true
+        rr_foot:
+          Alpha: 1
+          Show Axes: false
+          Show Trail: false
+          Value: true
+        rr_hip:
+          Alpha: 1
+          Show Axes: false
+          Show Trail: false
+          Value: true
+        rr_thigh:
+          Alpha: 1
+          Show Axes: false
+          Show Trail: false
+          Value: true
+        rr_thigh_shoulder:
           Alpha: 1
           Show Axes: false
           Show Trail: false
@@ -400,6 +436,314 @@ Visualization Manager:
       Update Interval: 0
       Value: true
       Visual Enabled: true
+    - Class: rviz_common/Group
+      Displays:
+        - Alpha: 1
+          Autocompute Intensity Bounds: true
+          Autocompute Value Bounds:
+            Max Value: 1.7580430507659912
+            Min Value: -1.927445888519287
+            Value: true
+          Axis: Z
+          Channel Name: intensity
+          Class: rviz_default_plugins/PointCloud2
+          Color: 255; 255; 255
+          Color Transformer: AxisColor
+          Decay Time: 0
+          Enabled: true
+          Invert Rainbow: false
+          Max Color: 255; 255; 255
+          Max Intensity: 4096
+          Min Color: 0; 0; 0
+          Min Intensity: 0
+          Name: Face Camera Points
+          Position Transformer: XYZ
+          Selectable: false
+          Size (Pixels): 1
+          Size (m): 0.009999999776482582
+          Style: Points
+          Topic:
+            Depth: 5
+            Durability Policy: Volatile
+            Filter size: 10
+            History Policy: Keep Last
+            Reliability Policy: Reliable
+            Value: /face_camera/points
+          Use Fixed Frame: true
+          Use rainbow: true
+          Value: true
+        - Alpha: 1
+          Autocompute Intensity Bounds: true
+          Autocompute Value Bounds:
+            Max Value: 10
+            Min Value: -10
+            Value: true
+          Axis: Z
+          Channel Name: intensity
+          Class: rviz_default_plugins/PointCloud2
+          Color: 255; 255; 255
+          Color Transformer: FlatColor
+          Decay Time: 0
+          Enabled: false
+          Invert Rainbow: false
+          Max Color: 255; 255; 255
+          Max Intensity: 4096
+          Min Color: 0; 0; 0
+          Min Intensity: 0
+          Name: Chin Camera Points
+          Position Transformer: XYZ
+          Selectable: false
+          Size (Pixels): 1
+          Size (m): 0.009999999776482582
+          Style: Points
+          Topic:
+            Depth: 5
+            Durability Policy: Volatile
+            Filter size: 10
+            History Policy: Keep Last
+            Reliability Policy: Reliable
+            Value: /chin_camera/points
+          Use Fixed Frame: true
+          Use rainbow: true
+          Value: false
+        - Alpha: 1
+          Autocompute Intensity Bounds: true
+          Autocompute Value Bounds:
+            Max Value: 10
+            Min Value: -10
+            Value: true
+          Axis: Z
+          Channel Name: intensity
+          Class: rviz_default_plugins/PointCloud2
+          Color: 255; 255; 255
+          Color Transformer: FlatColor
+          Decay Time: 0
+          Enabled: false
+          Invert Rainbow: false
+          Max Color: 255; 255; 255
+          Max Intensity: 4096
+          Min Color: 0; 0; 0
+          Min Intensity: 0
+          Name: Rear Down Camera Points
+          Position Transformer: XYZ
+          Selectable: false
+          Size (Pixels): 1
+          Size (m): 0.009999999776482582
+          Style: Points
+          Topic:
+            Depth: 5
+            Durability Policy: Volatile
+            Filter size: 10
+            History Policy: Keep Last
+            Reliability Policy: Reliable
+            Value: /rearDown_camera/points
+          Use Fixed Frame: true
+          Use rainbow: true
+          Value: false
+        - Alpha: 1
+          Autocompute Intensity Bounds: true
+          Autocompute Value Bounds:
+            Max Value: 4.005336761474609
+            Min Value: 0.14011788368225098
+            Value: true
+          Axis: Y
+          Channel Name: intensity
+          Class: rviz_default_plugins/PointCloud2
+          Color: 255; 255; 255
+          Color Transformer: AxisColor
+          Decay Time: 0
+          Enabled: true
+          Invert Rainbow: false
+          Max Color: 255; 255; 255
+          Max Intensity: 4096
+          Min Color: 0; 0; 0
+          Min Intensity: 0
+          Name: Left Camera Points
+          Position Transformer: XYZ
+          Selectable: false
+          Size (Pixels): 1
+          Size (m): 0.009999999776482582
+          Style: Points
+          Topic:
+            Depth: 5
+            Durability Policy: Volatile
+            Filter size: 10
+            History Policy: Keep Last
+            Reliability Policy: Reliable
+            Value: /left_camera/points
+          Use Fixed Frame: true
+          Use rainbow: true
+          Value: true
+        - Alpha: 1
+          Autocompute Intensity Bounds: true
+          Autocompute Value Bounds:
+            Max Value: 2.3706884384155273
+            Min Value: -0.03249861299991608
+            Value: true
+          Axis: Z
+          Channel Name: intensity
+          Class: rviz_default_plugins/PointCloud2
+          Color: 255; 255; 255
+          Color Transformer: AxisColor
+          Decay Time: 0
+          Enabled: true
+          Invert Rainbow: false
+          Max Color: 255; 255; 255
+          Max Intensity: 4096
+          Min Color: 0; 0; 0
+          Min Intensity: 0
+          Name: Right Camera Points
+          Position Transformer: XYZ
+          Selectable: false
+          Size (Pixels): 1
+          Size (m): 0.009999999776482582
+          Style: Points
+          Topic:
+            Depth: 5
+            Durability Policy: Volatile
+            Filter size: 10
+            History Policy: Keep Last
+            Reliability Policy: Reliable
+            Value: /right_camera/points
+          Use Fixed Frame: true
+          Use rainbow: true
+          Value: true
+      Enabled: false
+      Name: Camera Points
+    - Acceleration properties:
+        Acc. vector alpha: 0.25
+        Acc. vector color: 255; 85; 255
+        Acc. vector scale: 1
+        Derotate acceleration: true
+        Enable acceleration: true
+      Axes properties:
+        Axes scale: 0.25
+        Enable axes: true
+      Box properties:
+        Box alpha: 1
+        Box color: 255; 0; 0
+        Enable box: false
+        x_scale: 1
+        y_scale: 1
+        z_scale: 1
+      Class: rviz_imu_plugin/Imu
+      Enabled: true
+      Name: Imu
+      Topic:
+        Depth: 5
+        Durability Policy: Volatile
+        Filter size: 10
+        History Policy: Keep Last
+        Reliability Policy: Reliable
+        Value: /imu/data_raw
+      Value: true
+      fixed_frame_orientation: true
+    - Class: rviz_common/Group
+      Displays:
+        - Alpha: 0.5
+          Autocompute Intensity Bounds: true
+          Autocompute Value Bounds:
+            Max Value: 10
+            Min Value: -10
+            Value: true
+          Axis: Z
+          Channel Name: intensity
+          Class: rviz_default_plugins/PointCloud2
+          Color: 255; 255; 255
+          Color Transformer: Intensity
+          Decay Time: 0
+          Enabled: true
+          Invert Rainbow: false
+          Max Color: 255; 255; 255
+          Max Intensity: -999999
+          Min Color: 0; 0; 0
+          Min Intensity: 999999
+          Name: Face Ultrasonic Points
+          Position Transformer: XYZ
+          Selectable: true
+          Size (Pixels): 10
+          Size (m): 0.10000000149011612
+          Style: Boxes
+          Topic:
+            Depth: 5
+            Durability Policy: Volatile
+            Filter size: 10
+            History Policy: Keep Last
+            Reliability Policy: Reliable
+            Value: /face_ultrasound/points
+          Use Fixed Frame: true
+          Use rainbow: true
+          Value: true
+        - Alpha: 0.5
+          Autocompute Intensity Bounds: true
+          Autocompute Value Bounds:
+            Max Value: 10
+            Min Value: -10
+            Value: true
+          Axis: Z
+          Channel Name: intensity
+          Class: rviz_default_plugins/PointCloud2
+          Color: 255; 255; 255
+          Color Transformer: Intensity
+          Decay Time: 0
+          Enabled: true
+          Invert Rainbow: false
+          Max Color: 255; 255; 255
+          Max Intensity: 0
+          Min Color: 0; 0; 0
+          Min Intensity: 0
+          Name: Left Ultrasonic Points
+          Position Transformer: XYZ
+          Selectable: true
+          Size (Pixels): 10
+          Size (m): 0.10000000149011612
+          Style: Boxes
+          Topic:
+            Depth: 5
+            Durability Policy: Volatile
+            Filter size: 10
+            History Policy: Keep Last
+            Reliability Policy: Reliable
+            Value: /left_ultrasound/points
+          Use Fixed Frame: true
+          Use rainbow: true
+          Value: true
+        - Alpha: 0.5
+          Autocompute Intensity Bounds: true
+          Autocompute Value Bounds:
+            Max Value: 10
+            Min Value: -10
+            Value: true
+          Axis: Z
+          Channel Name: intensity
+          Class: rviz_default_plugins/PointCloud2
+          Color: 255; 255; 255
+          Color Transformer: Intensity
+          Decay Time: 0
+          Enabled: true
+          Invert Rainbow: false
+          Max Color: 255; 255; 255
+          Max Intensity: 0
+          Min Color: 0; 0; 0
+          Min Intensity: 0
+          Name: Right Ultrasonic Points
+          Position Transformer: XYZ
+          Selectable: true
+          Size (Pixels): 10
+          Size (m): 0.10000000149011612
+          Style: Boxes
+          Topic:
+            Depth: 5
+            Durability Policy: Volatile
+            Filter size: 10
+            History Policy: Keep Last
+            Reliability Policy: Reliable
+            Value: /right_ultrasound/points
+          Use Fixed Frame: true
+          Use rainbow: true
+          Value: true
+      Enabled: true
+      Name: Ultrasound
   Enabled: true
   Global Options:
     Background Color: 48; 48; 48
@@ -446,25 +790,25 @@ Visualization Manager:
   Views:
     Current:
       Class: rviz_default_plugins/Orbit
-      Distance: 1.0867536067962646
+      Distance: 6.814720153808594
       Enable Stereo Rendering:
         Stereo Eye Separation: 0.05999999865889549
         Stereo Focal Distance: 1
         Swap Stereo Eyes: false
         Value: false
       Focal Point:
-        X: 0.061408113688230515
-        Y: 0.048670604825019836
-        Z: -0.11944696307182312
+        X: 0
+        Y: 0
+        Z: 0
       Focal Shape Fixed Size: false
       Focal Shape Size: 0.05000000074505806
       Invert Z Axis: false
       Name: Current View
       Near Clip Distance: 0.009999999776482582
-      Pitch: 0.5753974914550781
+      Pitch: 0.7853981852531433
       Target Frame: base_link
       Value: Orbit (rviz)
-      Yaw: 0.8203942775726318
+      Yaw: 0.7853981852531433
     Saved: ~
 Window Geometry:
   Displays:
