@@ -441,8 +441,8 @@ Visualization Manager:
         - Alpha: 1
           Autocompute Intensity Bounds: true
           Autocompute Value Bounds:
-            Max Value: 1.7580430507659912
-            Min Value: -1.927445888519287
+            Max Value: 0.24902811646461487
+            Min Value: -0.21641488373279572
             Value: true
           Axis: Z
           Channel Name: intensity
@@ -459,7 +459,7 @@ Visualization Manager:
           Name: Face Camera Points
           Position Transformer: XYZ
           Selectable: false
-          Size (Pixels): 1
+          Size (Pixels): 4
           Size (m): 0.009999999776482582
           Style: Points
           Topic:
@@ -543,8 +543,8 @@ Visualization Manager:
         - Alpha: 1
           Autocompute Intensity Bounds: true
           Autocompute Value Bounds:
-            Max Value: 4.005336761474609
-            Min Value: 0.14011788368225098
+            Max Value: 1.9670852422714233
+            Min Value: 0.0404227152466774
             Value: true
           Axis: Y
           Channel Name: intensity
@@ -561,7 +561,7 @@ Visualization Manager:
           Name: Left Camera Points
           Position Transformer: XYZ
           Selectable: false
-          Size (Pixels): 1
+          Size (Pixels): 4
           Size (m): 0.009999999776482582
           Style: Points
           Topic:
@@ -577,8 +577,8 @@ Visualization Manager:
         - Alpha: 1
           Autocompute Intensity Bounds: true
           Autocompute Value Bounds:
-            Max Value: 2.3706884384155273
-            Min Value: -0.03249861299991608
+            Max Value: 0.37243130803108215
+            Min Value: -0.2840114235877991
             Value: true
           Axis: Z
           Channel Name: intensity
@@ -595,7 +595,7 @@ Visualization Manager:
           Name: Right Camera Points
           Position Transformer: XYZ
           Selectable: false
-          Size (Pixels): 1
+          Size (Pixels): 4
           Size (m): 0.009999999776482582
           Style: Points
           Topic:
@@ -689,9 +689,9 @@ Visualization Manager:
           Enabled: true
           Invert Rainbow: false
           Max Color: 255; 255; 255
-          Max Intensity: 0
+          Max Intensity: -999999
           Min Color: 0; 0; 0
-          Min Intensity: 0
+          Min Intensity: 999999
           Name: Left Ultrasonic Points
           Position Transformer: XYZ
           Selectable: true
@@ -723,9 +723,9 @@ Visualization Manager:
           Enabled: true
           Invert Rainbow: false
           Max Color: 255; 255; 255
-          Max Intensity: 0
+          Max Intensity: -999999
           Min Color: 0; 0; 0
-          Min Intensity: 0
+          Min Intensity: 999999
           Name: Right Ultrasonic Points
           Position Transformer: XYZ
           Selectable: true
@@ -790,7 +790,7 @@ Visualization Manager:
   Views:
     Current:
       Class: rviz_default_plugins/Orbit
-      Distance: 6.814720153808594
+      Distance: 10
       Enable Stereo Rendering:
         Stereo Eye Separation: 0.05999999865889549
         Stereo Focal Distance: 1
